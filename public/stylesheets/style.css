@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+form{
+  width:1000px;
+  height:50px;
+}
+input{
+	width:200px;
+	height: 50px
+}
+tr{
+  width:100px;
+  height:50px;
+}
+th{
+  width:100px;
+  height:50px;
+}
+td{
+  width:100px;
+  height:50px;
+}
+

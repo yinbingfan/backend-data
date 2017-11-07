@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+    h1 任务列表
+    hr
+    if task_list.length
+        table.table.table-bordered.table-condensed
+            tr
+                th 商品
+                th 商品名称
+                th 图片
+                th 商品价格
+                th 商品优惠
+                th 商品提示
+                th 尺码
+                th 颜色
+                th 评论
+                th 编辑
+                th 删除
+            each task in task_list
+                tr
+                    td #{task.bens}
+                    td #{task.des}
+                    td #{task.pic}
+                    td #{task.art}
+                    td #{task.meb}
+                    td #{task.lrc}
+                    td #{task.size}
+                    td #{task.col}
+                    td #{task.talk}
+                    td
+                        a.btn.btn-primary(href='/tasks/edit/#{task._id}') 编辑
+                    td
+                        form(method='post',action='/tasks/#{task._id}?_method=DELETE')
+                            button.btn(type='submit') 删除
+    else
+        p 没有任务，真轻松~
+    hr
+    p
+        a(href='/tasks/new') 添加任务

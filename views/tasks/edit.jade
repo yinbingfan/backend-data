@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+    form(method='post',action='/tasks/#{task._id}?_method=PUT')
+        fieldset
+            legend
+                a(href='/tasks') 任务列表
+                | /修改任务
+        div.clearfix
+            label 修改数据
+            div.input
+                input(name='task',class='form-control',style='width:200px!important;' value="#{task.bens}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品名称
+                input(name='task1',class='form-control',style='width:200px;' value="#{task.des}")
+                input(type='hidden',name='_method',value='PUT')
+            label 图片
+                input(name='task2',class='form-control',style='width:200px;' value="#{task.pic}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品价格
+                input(name='task3',class='form-control',style='width:200px;' value="#{task.art}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品优惠
+                input(name='task4',class='form-control',style='width:200px;' value="#{task.meb}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品提示
+                input(name='task5',class='form-control',style='width:200px;' value="#{task.lrc}")
+                input(type='hidden',name='_method',value='PUT')
+             label 评论
+                input(name='task6',class='form-control',style='width:200px;' value="#{task.talk}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品尺寸
+                input(name='task7',class='form-control',style='width:200px;' value="#{task.size}")
+            label 商品颜色
+                input(name='task8',class='form-control',style='width:200px;' value="#{task.col}")    
+                input(type='hidden',name='_method',value='PUT')
+        div.actions(style='margin-top:20px;')
+            input(type='submit',value='确　定',class='btn btn-primary')
+            span &nbsp;&nbsp;
+            button(type='reset',class='btn') 重　置
